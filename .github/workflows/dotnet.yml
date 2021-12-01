@@ -19,6 +19,6 @@ jobs:
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Build
-      run: dotnet publish --configuration Release --no-restore --output ./publish
+      run: dotnet publish --configuration Release --no-restore --path C:/SamplerepoPublish
    # - name: Test
     #  run: dotnet test --no-build --verbosity normal
