@@ -1,0 +1,24 @@
+name: .NET Core WorkFlow
+
+on: [push]
+    #branches: [ Branch2 ]
+  #pull_request:
+   # branches: [ Branch2 ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.1
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+    - name: Deploy to IIS
+      run: dotnet publish --configuration Release --no-restore --output ./publish
+    #- name: Test
+      #run: dotnet test --no-build --verbosity normal
