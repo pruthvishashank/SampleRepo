@@ -17,7 +17,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.1
-        run: echo Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
  
     - name: Build with dotnet
