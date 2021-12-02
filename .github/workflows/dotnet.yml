@@ -12,17 +12,6 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Generate certificates for next step
-        uses: kofemann/action-create-certificate@v0.0.4
-
-        with:
-          hostcert: 'hostcert.pem'
-          hostkey:  'hostkey.pem'
-          cachain:  'ca-chain.pem'
-
-      - name: Use generated certificates
-        run: |
-            openssl x509 -in hostcert.pem -noout -text
       - uses: actions/checkout@v1
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
