@@ -6,9 +6,8 @@ on: [push]
    # branches: [ Branch2 ]
 
 jobs: 
-  before_script:
-    run: echo Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-      build:
+   
+   build:
 
     runs-on: self-hosted
 
@@ -18,6 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.1
+        run: echo Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+ 
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Publish
