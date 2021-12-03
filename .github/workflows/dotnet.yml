@@ -20,4 +20,4 @@ jobs:
       - name: Build with Dotnet
         run: dotnet build --configuration Release
       - name: Publish
-        run: dotnet publish --configuration Release --no-restore --output C:/SampleRepoPublish
+        run: dotnet publish --configuration Release --no-restore --output C:/SampleRepoPublish --self-contained true
