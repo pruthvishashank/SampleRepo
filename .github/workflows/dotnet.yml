@@ -2,7 +2,7 @@ name: .NET Core
 
 on: [push]
  #   branches: [ Branch2 ]
-  #pull_request:     
+  #pull_request:
    # branches: [ Branch2 ]   
 
 jobs: 
