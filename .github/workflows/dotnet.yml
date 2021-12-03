@@ -20,4 +20,4 @@ jobs:
       - name: Build with Dotnet
         run: dotnet build --configuration Release
       - name: Publish
-        run: dotnet publish --configuration Release --no-restore --output C:/SampleRepoPublish --self-contained true --runtime osx.10.11-x64
+        run: dotnet publish C:\Users\pakula02\source\repos\SampleRepoNew --configuration Release --no-restore --output C:\SampleRepoPublish
