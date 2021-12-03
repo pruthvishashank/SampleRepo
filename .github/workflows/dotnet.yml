@@ -20,4 +20,4 @@ jobs:
       - name: Build with Dotnet
         run: dotnet build --configuration Release
       - name: Publish
-        run: dotnet publish C:\Users\pakula02\source\repos\Temp --configuration Release --no-restore --output C:\SampleRepoPublish
+        run: dotnet publish C:/Users/pakula02/source/repos/Temp --configuration Release --no-restore --output C:/SampleRepoPublish
